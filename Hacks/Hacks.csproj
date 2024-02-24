@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5127718-0BDE-4EDE-AE38-E0A9A0C9A969}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hacks</RootNamespace>
+    <AssemblyName>Hacks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\MelonLoader\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Jint, Version=0.0.0.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jint.2.11.58\lib\net451\Jint.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.6\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Services.Core.Networking">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\Unity.Services.Core.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\talgo\Desktop\3dash\3Dash Plus Beta Testing\3Dash_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\Downloads\3Dash\3Dash Windows v1.2\3Dash_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Generator.cs" />
+    <Compile Include="Assets\LogoAsset.cs" />
+    <Compile Include="AttemptCounter.cs" />
+    <Compile Include="AutoCheckpoints.cs" />
+    <Compile Include="Bottom.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="ClientModules\Die.cs" />
+    <Compile Include="ClientModules\Discord.cs" />
+    <Compile Include="ClientModules\Keybinds.cs" />
+    <Compile Include="ClientModules\SceneSwitcher.cs" />
+    <Compile Include="ClientWindowManager.cs" />
+    <Compile Include="DrawCustomize.cs" />
+    <Compile Include="DrawTest.cs" />
+    <Compile Include="Dropdown.cs" />
+    <Compile Include="DualSidedOption.cs" />
+    <Compile Include="Gizmos\Constants.cs" />
+    <Compile Include="Gizmos\Drawer.cs" />
+    <Compile Include="Gizmos\Drawers\CubeDrawer.cs" />
+    <Compile Include="Gizmos\Drawers\LineDrawer.cs" />
+    <Compile Include="Gizmos\Drawers\PolygonDrawer.cs" />
+    <Compile Include="Gizmos\Drawers\SquareDrawer.cs" />
+    <Compile Include="Gizmos\Element.cs" />
+    <Compile Include="Gizmos\Gizmos.cs" />
+    <Compile Include="Gizmos\GizmosInstance.cs" />
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="JintEditor.cs" />
+    <Compile Include="Modules\CatMode.cs" />
+    <Compile Include="Modules\DemonList.cs" />
+    <Compile Include="Modules\FlipGravity.cs" />
+    <Compile Include="Modules\FPSBypassToggle.cs" />
+    <Compile Include="Modules\Fullscreen.cs" />
+    <Compile Include="Modules\InfiniteObjectLimit.cs" />
+    <Compile Include="Modules\InfLevels.cs" />
+    <Compile Include="Modules\NoEditorBounds.cs" />
+    <Compile Include="Modules\ReplayMode.cs" />
+    <Compile Include="Modules\ReplaySave.cs" />
+    <Compile Include="Modules\ResolutionApply.cs" />
+    <Compile Include="Modules\ResolutionInput.cs" />
+    <Compile Include="Modules\SelectedReplay.cs" />
+    <Compile Include="Modules\ShowAttemptCount.cs" />
+    <Compile Include="Modules\SwapCamMode.cs" />
+    <Compile Include="Popup.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="TextDropdown.cs" />
+    <Compile Include="TextOption.cs" />
+    <Compile Include="Theming.cs" />
+    <Compile Include="WindowModules\DisplayModule.cs" />
+    <Compile Include="WindowModules\ReplayModule.cs" />
+    <Compile Include="WindowModules\ScriptModule.cs" />
+    <Compile Include="WindowModules\SpeedhackModule.cs" />
+    <Compile Include="WindowModules\TestingModule.cs" />
+    <Compile Include="Windows\Display.cs" />
+    <Compile Include="Windows\Replay.cs" />
+    <Compile Include="Windows\Misc.cs" />
+    <Compile Include="Windows\Speedhack.cs" />
+    <Compile Include="Windows\Testing.cs" />
+    <Compile Include="_DiscordRPC.cs" />
+    <Compile Include="DualSidedToggle.cs" />
+    <Compile Include="JoinDiscord.cs" />
+    <Compile Include="ModuleSetting.cs" />
+    <Compile Include="Modules\ClickGUI.cs" />
+    <Compile Include="Modules\Freecam.cs" />
+    <Compile Include="Modules\InstantComplete.cs" />
+    <Compile Include="Modules\JumpHack.cs" />
+    <Compile Include="Modules\Noclip.cs" />
+    <Compile Include="Modules\PracticeMusic.cs" />
+    <Compile Include="Modules\ShowHitbox.cs" />
+    <Compile Include="NoclipHook.cs" />
+    <Compile Include="Replay.cs" />
+    <Compile Include="Save.cs" />
+    <Compile Include="Slider.cs" />
+    <Compile Include="StatusMGR.cs" />
+    <Compile Include="TextInput.cs" />
+    <Compile Include="WindowModules\ClientModule.cs" />
+    <Compile Include="WindowModules\DebugModule.cs" />
+    <Compile Include="ModMain.cs" />
+    <Compile Include="DrawUtils.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="Modules\InfiniteDistance.cs" />
+    <Compile Include="WindowModules\OptionsModule.cs" />
+    <Compile Include="WindowModules\PlayerModule.cs" />
+    <Compile Include="WindowModules\StatusModule.cs" />
+    <Compile Include="WindowModules\CreatorModule.cs" />
+    <Compile Include="WindowModules\WorldModule.cs" />
+    <Compile Include="Scene Switcher.cs" />
+    <Compile Include="Window.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Client.cs" />
+    <Compile Include="Windows\Debug.cs" />
+    <Compile Include="Windows\GUI.cs" />
+    <Compile Include="Windows\Options.cs" />
+    <Compile Include="Windows\Player.cs" />
+    <Compile Include="Windows\Status.cs" />
+    <Compile Include="Windows\Creator.cs" />
+    <Compile Include="Windows\World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="OnTop.shader" />
+    <None Include="packages.config" />
+    <None Include="Gizmos\Constants.cs.meta" />
+    <None Include="Gizmos\Drawer.cs.meta" />
+    <None Include="Gizmos\Drawers.meta" />
+    <None Include="Gizmos\Drawers\CubeDrawer.cs.meta" />
+    <None Include="Gizmos\Drawers\LineDrawer.cs.meta" />
+    <None Include="Gizmos\Drawers\PolygonDrawer.cs.meta" />
+    <None Include="Gizmos\Drawers\SquareDrawer.cs.meta" />
+    <None Include="Gizmos\Element.cs.meta" />
+    <None Include="Gizmos\Gizmos.cs.meta" />
+    <None Include="Gizmos\GizmosInstance.cs.meta" />
+    <None Include="Gizmos\Popcron.Gizmos.Runtime.asmdef" />
+    <None Include="Gizmos\Popcron.Gizmos.Runtime.asmdef.meta" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
